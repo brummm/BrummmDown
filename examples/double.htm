@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<title>BDown: simple markdown editor</title>
+<meta name=description content="BDown is a simple markdown editor">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../src/bDown.js"></script>
+
+
+</head>
+<body>
+<h1>Two editors on the same page</h1>
+<textarea name="bDown-text" class="bDown-simple" rows="10" cols="100"></textarea>
+<textarea name="bDown-text-2" class="bDown-complete" rows="10" cols="100">abc
+def
+ghi</textarea>
+<script>
+$('.bDown-simple').bDown({
+  bundle: 'simple'
+});
+$('.bDown-complete').bDown();
+</script>
+</body>
+</html>
